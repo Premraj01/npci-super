@@ -12,10 +12,10 @@ const Status = ({ history }) => {
       history.push('/')
     }
     localStorage.clear()
-  //   setTimeout(() => {
-  //     history.push('/')
-  //   }, 6000)
-  // }, [])
+    //   setTimeout(() => {
+    //     history.push('/')
+    //   }, 6000)
+  }, [])
   return (
     <>
       <Card className='payment-card mt-4 p-3' style={{ width: '30rem' }}>
