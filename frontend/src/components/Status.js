@@ -14,7 +14,7 @@ const Status = ({ history }) => {
     localStorage.clear()
     setTimeout(() => {
       history.push('/')
-    }, 3000)
+    }, 6000)
   }, [])
   return (
     <>
@@ -25,6 +25,7 @@ const Status = ({ history }) => {
           style={{ width: '200px', margin: 'auto', display: 'block' }}
           alt='Loading...'
         />
+        <h6>wait..!!Page will automatically redirected.. </h6>
       </Card>
       )
     </>
