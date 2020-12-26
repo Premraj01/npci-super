@@ -1,0 +1,29 @@
+/** @format */
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+.amount-card {
+  border-radius: 15px 50px;
+  margin: auto;
+  scroll-behavior: smooth;
+  -webkit-box-shadow: 6px 6px 14px 0px rgba(50, 50, 51, 0.74);
+  -moz-box-shadow: 6px 6px 14px 0px rgba(50, 50, 51, 0.74);
+  box-shadow: 6px 6px 14px 0px rgba(50, 50, 51, 0.74);
+}
+
+.payment-card {
+  border-radius: 15px;
+  margin: auto;
+  scroll-behavior: smooth;
+  -webkit-box-shadow: 6px 6px 14px 0px rgba(50, 50, 51, 0.74);
+  -moz-box-shadow: 6px 6px 14px 0px rgba(50, 50, 51, 0.74);
+  box-shadow: 6px 6px 14px 0px rgba(50, 50, 51, 0.74);
+}
+
+.avatar-img {
+  width: 25px;
+  height: 25px;
+}
