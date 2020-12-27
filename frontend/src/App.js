@@ -6,7 +6,6 @@ import Payment from './components/Payment'
 import UPI from './components/UPI'
 import AmountCard from './components/AmountCard'
 import Status from './components/Status'
-import MainScreen from './screens/MainScreen'
 
 const App = () => {
   return (
