@@ -8,6 +8,8 @@ import {
   getBalanaceReducer,
   getUPIReducer,
   updateBalanaceReducer,
+  addMoneyReducer,
+  getAccountReducer,
 } from './reducers/accountReducers'
 import {
   getTransactionReducer,
@@ -15,6 +17,8 @@ import {
 } from './reducers/transactionReducers'
 
 const reducer = combineReducers({
+  getAccount: getAccountReducer,
+  addMoney: addMoneyReducer,
   userList: userListReducer,
   getBalanace: getBalanaceReducer,
   getUPI: getUPIReducer,

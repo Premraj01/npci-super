@@ -53,4 +53,35 @@ const updateBalanace = asyncHandler(async (req, res) => {
   }
 })
 
-export { getBalanace, authUPI, updateBalanace }
+//@desc get Account Info
+//@route GET /api/account
+//@access Public
+const getAccount = asyncHandler(async (req, res) => {
+  const account = await Account.findById(id).select('-UPI')
+
+  res.json({
+    _id: account._id,
+    account_holder: account.account_holder,
+    balanace: account.balanace,
+    token: generateToken(account.id),
+  })
+})
+
+//@desc ADD Money
+//@route PUT /api/account/addmoney
+//@access Private
+const addMoney = asyncHandler(async (req, res) => {
+  const account = await Account.findById(id).select('balanace')
+
+  if (account) {
+    account.balanace = account.balanace + req.body.amount
+
+    await account.save()
+    res.send('Success')
+  } else {
+    res.status(400)
+    throw new Error('cannont update balanace')
+  }
+})
+
+export { getBalanace, authUPI, updateBalanace, getAccount, addMoney }

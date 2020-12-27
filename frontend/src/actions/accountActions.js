@@ -11,7 +11,58 @@ import {
   ACCOUNT_BALANACE_UPDATE_REQUEST,
   ACCOUNT_BALANACE_UPDATE_SUCCESS,
   ACCOUNT_BALANACE_UPDATE_FAIL,
+  ACCOUNT_INFO_REQUEST,
+  ACCOUNT_INFO_SUCCESS,
+  ACCOUNT_INFO_FAIL,
+  ACCOUNT_ADD_MONEY_REQUEST,
+  ACCOUNT_ADD_MONEY_SUCCESS,
+  ACCOUNT_ADD_MONEY_FAIL,
 } from '../constants/accountConstants'
+
+export const getAccountInfo = () => async (dispatch) => {
+  try {
+    dispatch({ type: ACCOUNT_INFO_REQUEST })
+
+    const data = await axios.get('/api/account')
+
+    dispatch({
+      type: ACCOUNT_INFO_SUCCESS,
+      payload: data.data,
+    })
+  } catch (error) {
+    dispatch({
+      type: ACCOUNT_INFO_FAIL,
+      payload:
+        error.response && error.response.data.message
+          ? error.response.data.message
+          : error.message,
+    })
+  }
+}
+
+export const addMoneyAcc = (amount, token) => async (dispatch) => {
+  try {
+    dispatch({ type: ACCOUNT_ADD_MONEY_REQUEST })
+
+    const config = {
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${token}`,
+      },
+    }
+
+    const data = await axios.put('/api/account/addMoney', { amount }, config)
+
+    dispatch({
+      type: ACCOUNT_ADD_MONEY_SUCCESS,
+      payload: data.data,
+    })
+  } catch (error) {
+    dispatch({
+      type: ACCOUNT_ADD_MONEY_FAIL,
+    })
+  }
+}
 
 export const getAccBalanace = () => async (dispatch) => {
   try {
