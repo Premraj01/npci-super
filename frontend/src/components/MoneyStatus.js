@@ -5,11 +5,11 @@ import spinner from './success.gif'
 import { Card } from 'react-bootstrap'
 
 const MoneyStatus = ({ history }) => {
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     history.push('/')
-  //   }, 5000)
-  // }, [])
+  useEffect(() => {
+    setTimeout(() => {
+      history.push('/')
+    }, 5000)
+  }, [])
   return (
     <>
       <Card className='payment-card mt-4 p-3' style={{ width: '30rem' }}>
