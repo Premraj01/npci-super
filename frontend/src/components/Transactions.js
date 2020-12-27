@@ -3,7 +3,6 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Dropdown, Image, Row, Col } from 'react-bootstrap'
-import user from './img/user.png'
 import { getTransactions } from '../actions/transactionActions'
 const Transactions = () => {
   const dispatch = useDispatch()

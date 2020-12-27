@@ -1,13 +1,12 @@
 /** @format */
 
 import React, { useEffect } from 'react'
-import { hashHistory } from 'react-router'
 import { useDispatch, useSelector } from 'react-redux'
 import { Dropdown, Image, Row, Col } from 'react-bootstrap'
 import { LinkContainer } from 'react-router-bootstrap'
 import { listUsers } from '../actions/userActions'
 
-const Users = ({ history }) => {
+const Users = () => {
   const dispatch = useDispatch()
 
   const userList = useSelector((state) => state.userList)

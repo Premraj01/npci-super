@@ -3,7 +3,6 @@ import React, { useEffect } from 'react'
 import { Card, Button, Row, Col } from 'react-bootstrap'
 import PaymentSteps from '../components/PaymentSteps'
 import spinner from './success.gif'
-import { LinkContainer } from 'react-router-bootstrap'
 
 const Status = ({ history }) => {
   const customer = localStorage.getItem('userId')
@@ -12,9 +11,9 @@ const Status = ({ history }) => {
       history.push('/')
     }
     localStorage.clear()
-    //   setTimeout(() => {
-    //     history.push('/')
-    //   }, 6000)
+    setTimeout(() => {
+      history.push('/')
+    }, 5000)
   }, [])
   return (
     <>
@@ -25,7 +24,7 @@ const Status = ({ history }) => {
           style={{ width: '200px', margin: 'auto', display: 'block' }}
           alt='Loading...'
         />
-        <h6>wait..!!Page will automatically redirected.. </h6>
+        <h6 className="textAlign-center">wait..!!Page will automatically redirected.. </h6>
       </Card>
       )
     </>

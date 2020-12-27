@@ -10,7 +10,6 @@ import {
   Col,
   InputGroup,
   FormControl,
-  Container,
 } from 'react-bootstrap'
 import { getUPIInfo, updateBalanace } from '../actions/accountActions'
 import { saveTransaction } from '../actions/transactionActions'
