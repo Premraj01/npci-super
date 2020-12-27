@@ -36,8 +36,11 @@ const Payment = ({ history, location }) => {
 
   const submitHandler = (e) => {
     e.preventDefault()
-    if (amountInt > balanace || balanace <= 0) {
-      setMessage('Insufficient Balanace')
+    if (amountInt < 0) {
+      setMessage('Wrong Input')
+      setVal(true)
+    } else if (amountInt >= balanace) {
+      setMessage('insufficient balance')
       setVal(true)
     } else {
       history.push('/upi')
@@ -100,7 +103,6 @@ const Payment = ({ history, location }) => {
                   Request
                 </Button>
               </Col>
-              {val && <h6 style={{ color: 'red' }}>{message}</h6>}
             </Form.Row>
           </Form>
         </Card.Body>
