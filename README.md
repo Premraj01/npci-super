@@ -1,6 +1,6 @@
 
 ### NPCI SUPER APP
-Checkout here: https://npci-super.herokuapp.com/
+Live App: https://npci-super.herokuapp.com/
 
 **MainPage**
 ![MainPage](https://user-images.githubusercontent.com/41430322/103178728-8604c880-48ab-11eb-980f-6cd2c4b2d04f.JPG)
